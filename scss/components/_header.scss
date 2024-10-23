@@ -1,0 +1,63 @@
+header {
+    background-color: $color-secundario;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    .navbar-responsive {
+        display: none;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    .navbar-desktop {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    nav {
+        ul {display: flex;
+            justify-content: space-between;
+            margin-bottom: 0px !important;
+            .seleccionado {
+                border-bottom: solid 2px #FEFEFE;
+            }
+            li {
+                padding: 10px;
+                display: inline;
+                a {
+                    color: white;
+                    text-decoration: none;
+                    @include tipografia-secundaria (500, 2px, center);
+                    text-transform: uppercase;
+                    display: inline-grid;
+                    justify-content: center;
+                    justify-items: center;
+                    gap: 5px;
+                    font-size: 12px;
+                    padding: 5px;
+                    transition: 1s;
+                    &:hover{
+                        font-weight: 700;
+                    }
+                    .bi {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        a {
+            img {
+                height: 50px;
+                margin: 10px;
+            }
+        }
+    }
+}
+
+.container-fluid {
+    padding: 0 !important;
+    border: none !important;
+}
+
+.navbar-toggler{
+    border: none !important;
+}

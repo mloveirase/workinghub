@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: #89cec6;
+    color: $color-fondo;
+}
+
+%efecto-sombra {
+    -webkit-box-shadow: 10px 10px 22px -15px $sombra;
+    -moz-box-shadow: 10px 10px 22px -15px $sombra;
+    box-shadow: 10px 10px 22px -15px $sombra;
+}
+
+@mixin tipografia-principal ($font-size, $font-weight, $letter-spacing) {
+    font-family: "Dela Gothic One", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-size: $font-size ;
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin tipografia-secundaria ($font-weight, $letter-spacing, $text-align) {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
+    text-align: $text-align;
+}
+
+%card {
+    background-color: $color-cards;
+    text-align: center;
+    color: $color-textos;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+}
+
+h3 {
+    @include tipografia-secundaria (500, 0px, center);
+    color: $color-principal;
+}
+
+p {
+    @include tipografia-secundaria (400, 0px, left);
+    color: $color-textos;
+    margin-bottom: 0px !important;
+}
+
+.titulo {
+    @include tipografia-principal (32px, 400, 0.5px);;
+    color: $color-principal;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.boton-principal {
+    background-color: $color-secundario;
+    @include tipografia-secundaria (600, 0.75px, center);
+    color: $color-fondo;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    border: 2px solid $color-secundario;
+    transition: 0.5s;
+    &:hover{
+        background-color: $color-fondo;
+        color: $color-secundario;
+        border: 2px solid $color-secundario;
+        @extend %efecto-sombra;
+    }
+}
+
+.boton-secundario {
+    @include tipografia-secundaria (600, 0.75px, center);
+    color: $color-secundario;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid $color-secundario;
+    transition: 0.5s;
+    &:hover{
+        background-color: $color-secundario;
+        color: $color-fondo;
+        border: 2px solid $color-secundario;
+        @extend %efecto-sombra;
+    }
+}

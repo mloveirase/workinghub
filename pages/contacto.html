@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Working Hub | Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="description" content="Espacio de coworking ubicado en Palermo, Buenos Aires, para todos aquellos empleados que quieran trabajar juntos y cómodos, fuera de las oficinas y de sus casas.">
+    <meta name="keywords" content="Coworking, trabajo, oficinas, contacto, Palermo, Buenos Aires, empresas, empleados, colegas, trabajadores, espacio de trabajo, reserva, cotización, precio">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <title>Working Hub | Formulario de Contacto</title>
 </head>
 <body>
     <header>
@@ -23,7 +26,7 @@
                     </button>
                     </div>
                 </nav>
-                <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+                <a href="../index.html"><img src="../img/logo.png" alt="Logo de Working Hub"></a>
             </div>
             <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
                 <div>
@@ -38,7 +41,7 @@
             </div>
         </nav>
         <nav class="navbar-desktop">
-            <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+            <a href="../index.html"><img src="../img/logo.png" alt="Logo de Working Hub"></a>
             <ul>
                 <a href="../index.html"> 
                     <div class=""><li>
@@ -66,35 +69,34 @@
     </header>
     <main>
         <!--HERO SECTION-->
-        <section class="hero-secundario">
+        <section class="hero-secundario img-contacto">
             <!--IMAGEN DE FONDO-->
-            <img src="../img/grupo_2.jpg" alt="" class="">
             <div class="hero">
-                <h1 class="titulo-principal">Bienvenidos a Working Hub</h1>
-                <h2 class="titulo-secundario">El lugar ideal para todos los equipos de trabajo</h2>
+                <h1 class="titulo-principal animate__animated animate__fadeIn">Bienvenidos a Working Hub</h1>
+                <h2 class="titulo-secundario animate__animated animate__fadeIn">El lugar ideal para todos los equipos de trabajo</h2>
             </div>
         </section>
         <!--FORMULARIO DE CONTACTO-->
-        <section class="contacto">
+        <section class="contacto" data-aos="fade-down" data-aos-duration="1000">
             <h2 class="titulo">¡Comunicate con nosotros!</h2>
                     <form action="" method="" enctype="" class="formulario-de-contacto">
-                        <div class="nombre-usuario">
+                        <div class="nombre-usuario input-general">
                             <label for="">Nombre y apellido:</label>
                             <input type="text" class="input-formulario" placeholder="Ingresá tu nombre y apellido*">
                         </div>
-                        <div class="mail-usuario">
+                        <div class="mail-usuario input-general">
                             <label for="" >Mail:</label>
                             <input type="email" class="input-formulario" placeholder="Ingresá tu mail*">
                         </div>
-                        <div class="telefono-usuario">
+                        <div class="telefono-usuario input-general">
                             <label for="">Teléfono:</label>
                             <input type="number" class="input-formulario" placeholder="Ingresá tu numero de teléfono*">
                         </div>
-                        <div class="input-empresa">
+                        <div class="input-empresa input-general">
                             <label for="">Empresa:</label>
                             <input type="text" class="input-formulario" placeholder="Ingresá el nombre de la empresa">
                         </div>
-                        <div class="input-tipo-oficina">
+                        <div class="input-tipo-oficina input-general">
                             <label for="">Tipo de oficina:</label>
                             <select name="" id="" class="input-formulario">
                             <option value="">Comunitaria</option>
@@ -102,15 +104,15 @@
                             <option value="">Privada</option>
                             </select>
                         </div>
-                        <div class="input-fechas">
+                        <div class="input-fechas input-general">
                             <label for="">Reserva desde:</label>
                                 <input type="date" class="input-formulario" placeholder="">
                         </div>
-                        <div class="input-fechas">
+                        <div class="input-fechas input-general">
                             <label for="">Reserva hasta:</label>
                                 <input type="date" class="input-formulario" placeholder="">
                         </div>
-                        <div class="input-tipo-plan">
+                        <div class="input-tipo-plan input-general">
                             <label for="">Tipo de plan:</label>
                             <select name="" id="" class="input-formulario">
                             <option value="">Por día</option>
@@ -118,7 +120,7 @@
                             <option value="">Anual</option>
                             </select>
                         </div>
-                        <div class="input-pago">
+                        <div class="input-pago input-general">
                             <label for="">Forma de pago:</label>
                             <select name="" id="" class="input-formulario">
                             <option value="">Transferencia</option>
@@ -126,7 +128,7 @@
                             <option value="">Tarjeta de crédito</option>
                             </select>
                         </div>
-                        <div class="campo-observaciones">
+                        <div class="campo-observaciones input-general">
                             <label for="">Observaciones:</label>
                                 <textarea name="" id="" class="input-formulario" placeholder="Podés agregar alguna observación que consideres necesaria"></textarea>
                         </div>
@@ -156,7 +158,7 @@
                 </div>
         </section>
         <!--UBICACION-->
-        <section class="mapa">
+        <section class="mapa" data-aos="fade-down" data-aos-duration="1000">
             <!--MAPA-->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4020.680478935234!2d-58.42747317244611!3d-34.58579882623145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5892a867861%3A0x7873af46af99dc43!2sUriarte%201650%2C%20C1414%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1727717555167!5m2!1ses-419!2sar" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div>
@@ -198,5 +200,9 @@
             <p>contacto@workinghub.com</p>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

@@ -1,0 +1,499 @@
+main {
+    .hero-index {
+        position: relative;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 90vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        .hero {
+            position: absolute;
+            bottom: 0px;
+            padding: 10px;
+            text-align: center;
+            align-content: center;
+            background-color: #21212194;
+            width: 100%;
+            height: 100%;
+            .titulo-principal {
+                @include tipografia-principal (36px, 400, 1.5px);
+                font-weight: bolder;
+                text-transform: uppercase;
+                color: $color-fondo !important;
+            }
+            .titulo-secundario {
+                font-size: 26px;
+                color: $color-fondo;
+            }
+            p {
+                color: $color-fondo;
+                text-align: center;
+            }
+        }
+    }
+    .img-index {
+        background-image: url("../img/grupo_3.jpg");
+    }
+    .hero-secundario {
+        position: relative;
+        @include tipografia-secundaria (400, 0px, center);
+        width: 100%;
+        height: 70vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        .hero {
+            position: absolute;
+            bottom: 0px;
+            padding: 10px;
+            text-align: center;
+            align-content: center;
+            background-color: #21212194;
+            width: 100%;
+            height: 100%;
+            .titulo-principal {
+                @include tipografia-principal (36px, 400, 1.5px);
+                font-weight: bolder;
+                text-transform: uppercase;
+                color: $color-fondo !important;
+            }
+            .titulo-secundario {
+                font-size: 26px;
+                color: $color-fondo;
+            }
+        }
+    }
+    .img-servicios {
+        background-image: url("../img/comedor_2.jpg");
+    }
+    .img-preguntas {
+        background-image: url("../img/conference.jpg");
+    }
+    .img-planes {
+        background-image: url("../img/lounge_6.jpg");
+    }
+    .img-contacto {
+        background-image: url("../img/grupo_2.jpg");
+    }
+    .info-oficina {
+        text-align: center;
+        margin: 50px;
+        .tipos-de-oficinas {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            align-items: center;
+            justify-content: center;
+            row-gap: 20px;
+            column-gap: 20px;
+            margin-bottom: 20px;
+            .card-oficina {
+                @extend %card;
+                height: 100%;
+                transition: 1s;
+                &:hover{
+                    @extend %efecto-sombra;
+                    transform: scale(1.05);
+                }
+                img{
+                    width: 100%;
+                    height: 50%;
+                    border-radius: 10px;
+                    object-fit: cover;
+                }
+                h3{
+                    @include tipografia-principal (18px, 400, 0px);
+                    color: $color-principal;
+                    font-size: 18px;
+                }
+                p{
+                    padding-bottom: 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .info-servicios{
+        text-align: center;
+        @include tipografia-secundaria (600, 0.75px, center);
+        margin: 50px;
+        .servicios-principales{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            .info-principal{
+                margin: 20px;
+                border-radius: 10px;
+                transition: 1s;
+                &:hover {
+                    @extend %efecto-sombra;
+                    -webkit-transform: translateY(-10px);
+                    transform: translateY(-10px);
+                }
+                img{
+                    width: 40%;
+                    margin: 10px;
+                }
+                h4{
+                    @include tipografia-secundaria (600, 0.5px, center);
+                    color: $color-principal;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .mapa{
+        margin: 50px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        iframe{
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+        }
+        div{
+            width: 100%;
+            h2{
+                text-align: left;
+            }
+            h3{
+                @include tipografia-secundaria (600, 0px, left);
+                font-size: 18px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: $color-principal;
+            }
+        }
+    }
+    .marcas{
+        margin: 50px;
+        color: $color-principal;
+        .carrusel-marcas{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            align-items: center;
+            justify-items: center;
+            a {
+                border-radius: 10px;
+                transition: 1s;
+                img {
+                    width: 100%;
+                    padding: 10px;
+                    }
+                    &:hover {
+                    @extend %efecto-sombra;
+                    -webkit-transform: translateY(-10px);
+                    transform: translateY(-10px);
+                }
+                }
+            }
+        }
+    }
+    .tipos-de-planes {
+        margin: 40px;
+        .planes {
+            display: flex;
+            row-gap: 20px;
+            column-gap: 20px;
+            .card-plan {
+                @extend %card;
+                gap: 10px;
+                transition: 1s;
+                &:hover{
+                    @extend %efecto-sombra;
+                    transform: scale(1.05);
+                }
+                img {
+                    width: 100%;
+                    height: 50%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+                .sticker {
+                    background-color: $color-sticker;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50px;
+                    margin: 5px;
+                    padding: 5px;
+                    position: absolute;
+                    top: -20px;
+                    right: -20px;
+                    align-content: center;
+                    @extend %efecto-sombra;
+                    i {
+                        color: $color-textos;
+                    }
+                    h2 {
+                        text-transform: uppercase;
+                        font-size: 10px;
+                        color: $color-textos;
+                        font-weight: bolder;
+                    }
+                }
+                h3 {
+                    @include tipografia-principal (18px, 500, 0px);
+                    color: $color-principal;
+                }
+                div {
+                    p {
+                        margin-bottom: 5px;
+                        text-align: center;
+                    }
+                }
+                h4 {
+                    @include tipografia-secundaria (800, 1.5px, center);
+                    font-style: normal;
+                    margin-top: 40px;
+                    margin-bottom: 15px;
+                    font-size: 24px;
+                } 
+            }
+        }
+    }
+    .servicios-secundarios{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        .info-secundaria{
+            margin: 20px;
+            letter-spacing: 0.75px;
+            border-radius: 10px;
+            transition: 1s;
+                &:hover {
+                    @extend %efecto-sombra;
+                    -webkit-transform: translateY(-10px);
+                    transform: translateY(-10px);
+                }
+            img{
+                width:  20%;
+                margin-bottom: 10px;
+            }
+            h4{
+                @include tipografia-secundaria (600, 0.5px, center);
+                font-size: 14px;
+                color: $color-principal;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .descripcion-servicios{
+        display: flex;
+        margin: 40px;
+        column-gap: 20px;
+        align-items: center;
+        @include tipografia-secundaria (700, 0px, left);
+        img{
+            width: 50%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+        div{
+            align-items: center;
+            width: 50%;
+            h2{
+                color: $color-principal;
+                font-size: 24px;
+                font-weight: 700;
+            }
+            h4{
+                @include tipografia-secundaria (400, 0px, left);
+                font-optical-sizing: auto;
+                margin-bottom: 20px;
+                margin-top: 10px;
+                font-size: 18px;
+            }
+        }
+    }
+    .musica{
+        margin: 40px;
+        align-items: center;
+    }
+    .preguntas{
+        @include tipografia-secundaria (400, 0px, left);
+        margin: 40px;
+        .accordion{
+            .accordion-item{
+                .accordion-header{
+                    .accordion-button{
+                        color: $color-principal !important;
+                        background-color: $color-fondo !important;
+                        letter-spacing: 0.5px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        transition: 1s;
+                        &:hover{
+                            z-index: 0 !important;
+                        }
+                        &:focus{
+                            z-index: 0 !important;
+                        }
+                        &:not(.collapsed){
+                            background-color: $color-principal !important;
+                            color: $color-fondo !important;
+                            font-weight: 700 !important;
+                            letter-spacing: 0.5px !important;
+                        }
+                    }
+                }
+            }
+            a{
+                color: $color-secundario ;
+                @include tipografia-secundaria (700, 0px, left);
+            }
+        }
+    }
+    .contacto{
+        margin: 40px;
+        .formulario-de-contacto{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 50px 50px 80px 30px;
+            row-gap: 30px;
+            column-gap: 30px;
+            .input-general{
+                @include tipografia-secundaria (600, 0px, left);
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 5px;
+                input{
+                    line-height: normal !important;
+                    border: none;
+                    border-bottom: $color-principal solid;
+                    padding: 5px;
+                }
+                select{
+                    line-height: normal !important;
+                    border: none;
+                    border-bottom: $color-principal solid;
+                    padding: 5px;
+                }
+            }
+            .nombre-usuario{
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+            .mail-usuario{
+                grid-column-start: 3;
+                grid-column-end: 5;
+            }
+            .telefono-usuario{
+                grid-column-start: 5;
+                grid-column-end: 7;
+            }
+            .campo-observaciones{
+                grid-column-start: 1;
+                grid-column-end: 7;
+                .textarea{
+                    border-radius: 10px;
+                    padding: 5px;
+                }
+            }
+            .enviar{
+                grid-column-start: 3;
+                grid-column-end: 4;
+                .boton-enviar{
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0;
+                    background-color: $color-secundario;
+                    color: $color-fondo;
+                    @include tipografia-secundaria (600, 0.75px, center);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 8px 10px 8px 10px;
+                    border-radius: 10px;
+                    border: 2px solid $color-secundario;
+                    gap: 5px;
+                    width: 100%;
+                    transition: 1s;
+                    &:hover{
+                        background-color: $color-fondo;
+                        color: $color-secundario;
+                        border: 2px solid $color-secundario;
+                        @extend %efecto-sombra;
+                    }
+                }
+            }
+            .resetear{
+                grid-column-start: 4;
+                grid-column-end: 5;
+                .boton-reset{
+                    align-items: center;
+                    justify-content: center;
+                    color: $color-secundario;
+                    background-color: $color-fondo;
+                    @include tipografia-secundaria (600, 0.75px, center);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: 2px solid $color-secundario;
+                    gap: 5px;
+                    width: 100%;
+                    transition: 1s;
+                    &:hover{
+                        background-color: $color-secundario;
+                        color: $color-fondo;
+                        border: 2px solid $color-secundario;
+                        @extend %efecto-sombra;
+                    }
+                }
+            }
+        }
+        .modal{
+            .modal-dialog{
+                .modal-content{
+                    .modal-body{
+                        @include tipografia-secundaria (400, 0px, center);
+                        font-size: 16px;
+                        color: $color-textos;
+                        i{
+                            font-size: 80px !important;
+                            color: $color-principal;
+                        }
+                        h2{
+                            @include tipografia-secundaria (700, 0px, center);
+                            font-size: 28px;
+                            color: $color-principal;
+                        }
+                    }
+                    .modal-footer{
+                        align-content: center;
+                        border-top: none !important;
+                        justify-content: center !important;
+                        .btn-secondary{
+                            background-color: $color-fondo !important;
+                            border-color: $color-secundario !important;
+                            color: $color-secundario !important;
+                            text-transform: uppercase !important;
+                            @include tipografia-secundaria (500 !important, 0.75px !important, center);
+                            transition: 1s;
+                            &:hover{
+                                background-color: $color-secundario !important;
+                                border-color: $color-secundario !important;
+                                color: $color-fondo !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
