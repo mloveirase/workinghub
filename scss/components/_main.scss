@@ -290,6 +290,37 @@ main {
             }
         }
     }
+    .terraza{
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 60%, rgba(185,185,185,1) 100%);
+        border-radius: 30px;
+        display: flex;
+        margin: 40px;
+        padding-left: 20px;
+        column-gap: 20px;
+        align-items: center;
+        @include tipografia-secundaria (700, 0px, left);
+        div{
+            align-items: center;
+            width: 50%;
+            h2{
+                color: $color-principal;
+                font-size: 24px;
+                font-weight: 700;
+            }
+            h4{
+                @include tipografia-secundaria (400, 0px, left);
+                font-optical-sizing: auto;
+                font-size: 18px;
+            }
+        }
+        img{
+            width: 50%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+    }
     .descripcion-servicios{
         display: flex;
         margin: 40px;

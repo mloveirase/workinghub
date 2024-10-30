@@ -19,8 +19,8 @@ header {
             }
         }
         .mapa{
-                margin-right: 20px;
-                margin-left: 20px;
+                margin-right: 40px;
+                margin-left: 40px;
             }
         .marcas{
             .carrusel-marcas{
@@ -34,6 +34,11 @@ header {
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
             }
+        .terraza {
+            img {
+                height: 250px;
+            }
+        }
         .contacto{
             .formulario-de-contacto{
                         display: grid;
@@ -77,6 +82,13 @@ header {
             }
 
 @media screen and (max-width: 900px) {
+    main {
+        .terraza {
+            img {
+                height: 200px;
+            }
+        }
+    }
     footer{
         padding-left: 20px;
         padding-right: 20px;
@@ -124,7 +136,7 @@ header {
                 }
             }
         }
-        .hero-seundario {
+        .hero-secundario {
             img {
                 height: 50vh;
             }
@@ -139,8 +151,6 @@ header {
         }
         .info-oficina {
             text-align: center;
-            margin-right: 20px;
-            margin-left: 20px;
             .tipos-de-oficinas {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -160,10 +170,6 @@ header {
                     font-size: 24px;
                 }
             }
-        }
-        .preguntas {
-            margin-right: 20px;
-            margin-left: 20px;
         }
         .contacto {
             .formulario-de-contacto {
@@ -224,6 +230,21 @@ header {
 
 @media screen and (max-width: 700px) {
     main {
+        .terraza {
+            flex-direction: column;
+            gap: 5px;
+            padding-top: 20px;
+            padding-left: 0px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            div {
+                width: 100%;
+            }
+            img {
+                width: 100%;
+                height: 350px;
+            }
+        }
         .descripcion-servicios {
             flex-direction: column;
             gap: 20px;
@@ -241,6 +262,11 @@ header {
 
 @media screen and (max-width: 600px) {
     main {
+        .terraza {
+            img {
+                height: 250px;
+            }
+        }
         .contacto {
             .formulario-de-contacto {
                 display: grid;
@@ -315,7 +341,6 @@ header {
             }
         }
         .info-servicios {
-            margin: 20px;
             .servicios-principales {
                 display: grid;
                 grid-template-columns: 1fr 1fr ;
@@ -328,36 +353,21 @@ header {
             }
         }
         .marcas {
-            margin: 20px;
             .carrusel-marcas {
                 display: grid;
                 grid-template-columns: 1fr 1fr ;
                 grid-template-rows: 1fr 1fr 1fr;
             }
         }
-        .tipos-de-planes {
-            margin-right: 20px;
-            margin-right: 20px;
-        }
         .servicios-secundarios {
             display: grid;
             grid-template-columns: 1fr 1fr ;
             grid-template-rows: 80px 80px 80px;
-            margin: 20px;
             .info-secundaria {
                 img {
                     width:  15%;
                 }
             }
-        }
-        .descripcion-servicios {
-            margin: 20px;
-        }
-        .musica {
-            margin: 20px;
-        }
-        .contacto {
-            margin: 20px;
         }
     }
     .titulo {
@@ -386,6 +396,11 @@ header {
                 .titulo-secundario {
                     font-size: 18px;
                 }
+            }
+        }
+        .terraza {
+            img {
+                height: 150px;
             }
         }
     }

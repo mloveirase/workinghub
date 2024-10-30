@@ -113,33 +113,29 @@ header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0px !important; }
-    header nav ul .seleccionado {
-      border-bottom: solid 2px #FEFEFE; }
-    header nav ul li {
-      padding: 10px;
-      display: inline; }
-      header nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-family: "Montserrat", sans-serif;
-        font-style: normal;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        letter-spacing: 2px;
-        text-align: center;
-        text-transform: uppercase;
-        display: inline-grid;
-        justify-content: center;
-        justify-items: center;
-        gap: 5px;
-        font-size: 12px;
-        padding: 5px;
-        transition: 1s; }
-        header nav ul li a:hover {
-          font-weight: 700; }
-        header nav ul li a .bi {
-          font-size: 20px; }
-  header nav a img {
+    header nav ul a {
+      color: white;
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 12px;
+      transition: 1s; }
+      header nav ul a:hover {
+        font-weight: 700; }
+      header nav ul a .bi {
+        font-size: 20px; }
+      header nav ul a .seleccionado {
+        border-bottom: solid 2px #FEFEFE; }
+      header nav ul a li {
+        padding: 10px;
+        display: flex;
+        flex-direction: column; }
+  header a img {
     height: 50px;
     margin: 10px; }
 
@@ -502,6 +498,43 @@ main .marcas {
       color: #49BCAE;
       text-transform: uppercase; }
 
+.terraza {
+  background: white;
+  background: linear-gradient(180deg, white 60%, #b9b9b9 100%);
+  border-radius: 30px;
+  display: flex;
+  margin: 40px;
+  padding-left: 20px;
+  column-gap: 20px;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  letter-spacing: 0px;
+  text-align: left; }
+  .terraza div {
+    align-items: center;
+    width: 50%; }
+    .terraza div h2 {
+      color: #49BCAE;
+      font-size: 24px;
+      font-weight: 700; }
+    .terraza div h4 {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      letter-spacing: 0px;
+      text-align: left;
+      font-optical-sizing: auto;
+      font-size: 18px; }
+  .terraza img {
+    width: 50%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 30px; }
+
 .descripcion-servicios {
   display: flex;
   margin: 40px;
@@ -726,8 +759,8 @@ main .marcas {
       width: 20%;
       margin: 10px; }
   main .mapa {
-    margin-right: 20px;
-    margin-left: 20px; }
+    margin-right: 40px;
+    margin-left: 40px; }
   main .marcas .carrusel-marcas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -736,6 +769,8 @@ main .marcas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr; }
+  main .terraza img {
+    height: 250px; }
   main .contacto .formulario-de-contacto {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -765,6 +800,8 @@ main .marcas {
     padding-left: 20px; } }
 
 @media screen and (max-width: 900px) {
+  main .terraza img {
+    height: 200px; }
   footer {
     padding-left: 20px;
     padding-right: 20px; } }
@@ -790,16 +827,14 @@ main .marcas {
     font-size: 28px; }
   main .hero-index .hero .titulo-secundario {
     font-size: 22px; }
-  main .hero-seundario img {
+  main .hero-secundario img {
     height: 50vh; }
-  main .hero-seundario .hero-secundario .titulo-principal {
+  main .hero-secundario .hero-secundario .titulo-principal {
     font-size: 28px; }
-  main .hero-seundario .hero-secundario .titulo-secundario {
+  main .hero-secundario .hero-secundario .titulo-secundario {
     font-size: 22px; }
   main .info-oficina {
-    text-align: center;
-    margin-right: 20px;
-    margin-left: 20px; }
+    text-align: center; }
     main .info-oficina .tipos-de-oficinas {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -811,9 +846,6 @@ main .marcas {
     flex-direction: column; }
     main .mapa div h2 {
       font-size: 24px; }
-  main .preguntas {
-    margin-right: 20px;
-    margin-left: 20px; }
   main .contacto .formulario-de-contacto {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -857,6 +889,18 @@ main .marcas {
         text-align: center; } }
 
 @media screen and (max-width: 700px) {
+  main .terraza {
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 20px;
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    main .terraza div {
+      width: 100%; }
+    main .terraza img {
+      width: 100%;
+      height: 350px; }
   main .descripcion-servicios {
     flex-direction: column;
     gap: 20px; }
@@ -868,6 +912,8 @@ main .marcas {
       order: 2; } }
 
 @media screen and (max-width: 600px) {
+  main .terraza img {
+    height: 250px; }
   main .contacto .formulario-de-contacto {
     display: grid;
     grid-template-columns: 1fr;
@@ -914,36 +960,22 @@ main .marcas {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr; }
-  main .info-servicios {
-    margin: 20px; }
-    main .info-servicios .servicios-principales {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr; }
-      main .info-servicios .servicios-principales .info-principal img {
-        width: 15%; }
-  main .marcas {
-    margin: 20px; }
-    main .marcas .carrusel-marcas {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr; }
-  main .tipos-de-planes {
-    margin-right: 20px;
-    margin-right: 20px; }
+  main .info-servicios .servicios-principales {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; }
+    main .info-servicios .servicios-principales .info-principal img {
+      width: 15%; }
+  main .marcas .carrusel-marcas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; }
   main .servicios-secundarios {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 80px 80px;
-    margin: 20px; }
+    grid-template-rows: 80px 80px 80px; }
     main .servicios-secundarios .info-secundaria img {
       width: 15%; }
-  main .descripcion-servicios {
-    margin: 20px; }
-  main .musica {
-    margin: 20px; }
-  main .contacto {
-    margin: 20px; }
   .titulo {
     font-size: 24px;
     margin-bottom: 0px; } }
@@ -956,7 +988,9 @@ main .marcas {
   main .hero-secundario .hero .titulo-principal {
     font-size: 22px; }
   main .hero-secundario .hero .titulo-secundario {
-    font-size: 18px; } }
+    font-size: 18px; }
+  main .terraza img {
+    height: 150px; } }
 
 @media screen and (max-width: 350px) {
   main .info-servicios .servicios-principales {

@@ -17,23 +17,12 @@ header {
         ul {display: flex;
             justify-content: space-between;
             margin-bottom: 0px !important;
-            .seleccionado {
-                border-bottom: solid 2px #FEFEFE;
-            }
-            li {
-                padding: 10px;
-                display: inline;
                 a {
                     color: white;
                     text-decoration: none;
                     @include tipografia-secundaria (500, 2px, center);
                     text-transform: uppercase;
-                    display: inline-grid;
-                    justify-content: center;
-                    justify-items: center;
-                    gap: 5px;
                     font-size: 12px;
-                    padding: 5px;
                     transition: 1s;
                     &:hover{
                         font-weight: 700;
@@ -41,6 +30,13 @@ header {
                     .bi {
                         font-size: 20px;
                     }
+                    .seleccionado {
+                        border-bottom: solid 2px #FEFEFE;
+                    }
+                    li {
+                        padding: 10px;
+                        display: flex;
+                        flex-direction: column;}
                 }
             }
         }
@@ -51,7 +47,7 @@ header {
             }
         }
     }
-}
+
 
 .container-fluid {
     padding: 0 !important;
