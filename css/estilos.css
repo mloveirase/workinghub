@@ -9,7 +9,7 @@
   background: #89cec6;
   color: #FEFEFE; }
 
-.boton-principal:hover, .boton-secundario:hover, main .info-oficina .tipos-de-oficinas .card-oficina:hover, main .info-servicios .servicios-principales .info-principal:hover, main .marcas .carrusel-marcas a:hover, .tipos-de-planes .planes .card-plan:hover, .tipos-de-planes .planes .card-plan .sticker, .servicios-secundarios .info-secundaria:hover, .galeria-imagenes .grilla-imagenes .img-galeria:hover, .contacto .formulario-de-contacto .enviar .boton-enviar:hover, .contacto .formulario-de-contacto .resetear .boton-reset:hover {
+.boton-principal:hover, .boton-secundario:hover, main .info-oficina .tipos-de-oficinas .card-oficina:hover, main .info-servicios .servicios-principales .info-principal:hover, main .marcas .carrusel-marcas a:hover, .tipos-de-planes .planes .card-plan:hover, .tipos-de-planes .planes .card-plan .sticker, .servicios-secundarios .info-secundaria:hover, .contacto .formulario-de-contacto .enviar .boton-enviar:hover, .contacto .formulario-de-contacto .resetear .boton-reset:hover {
   -webkit-box-shadow: 10px 10px 22px -15px #212121;
   -moz-box-shadow: 10px 10px 22px -15px #212121;
   box-shadow: 10px 10px 22px -15px #212121; }
@@ -164,7 +164,9 @@ footer {
   grid-template-rows: 1fr;
   align-items: center; }
   footer .secciones-web {
-    border-right: solid 1px #FEFEFE; }
+    border-right: solid 1px #FEFEFE;
+    align-content: center;
+    height: 100%; }
     footer .secciones-web a img {
       height: 40px; }
     footer .secciones-web ul {
@@ -227,7 +229,7 @@ main .hero-index {
   main .hero-index .hero {
     position: absolute;
     bottom: 0px;
-    padding: 10px;
+    padding: 40px;
     text-align: center;
     align-content: center;
     background-color: #21212194;
@@ -270,7 +272,7 @@ main .hero-secundario {
   main .hero-secundario .hero {
     position: absolute;
     bottom: 0px;
-    padding: 10px;
+    padding: 40px;
     text-align: center;
     align-content: center;
     background-color: #21212194;
@@ -517,7 +519,8 @@ main .marcas {
       .galeria-imagenes .grilla-imagenes .img-galeria h2 {
         display: none; }
       .galeria-imagenes .grilla-imagenes .img-galeria:hover {
-        transform: scale(1.05); }
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px); }
         .galeria-imagenes .grilla-imagenes .img-galeria:hover h2 {
           font-family: "Montserrat", sans-serif;
           font-style: normal;
@@ -526,10 +529,10 @@ main .marcas {
           letter-spacing: 0.75px;
           text-align: center;
           font-size: 22px;
-          color: #49BCAE;
+          color: #FEFEFE;
           text-transform: uppercase;
           position: absolute;
-          background-color: #21212195;
+          background-color: #00000090;
           width: 100%;
           height: 100%;
           bottom: 0;
@@ -790,6 +793,8 @@ main .marcas {
     text-align: center;
     font-size: 28px;
     color: #49BCAE; }
+  .modal .modal-dialog .modal-content .modal-body p {
+    text-align: center !important; }
 
 .modal .modal-dialog .modal-content .modal-footer {
   align-content: center;
@@ -867,8 +872,8 @@ main .marcas {
   main .terraza img {
     height: 200px; }
   footer {
-    padding-left: 20px;
-    padding-right: 20px; } }
+    padding-left: 40px;
+    padding-right: 40px; } }
 
 @media screen and (max-width: 800px) {
   header .navbar-desktop {
@@ -910,6 +915,38 @@ main .marcas {
     flex-direction: column; }
     main .mapa div h2 {
       font-size: 24px; }
+  main .galeria-imagenes .grilla-imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 150px 150px 150px;
+    padding: 0px;
+    padding-top: 20px;
+    gap: 15px; }
+    main .galeria-imagenes .grilla-imagenes .img-1 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3; }
+    main .galeria-imagenes .grilla-imagenes .img-2 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2; }
+    main .galeria-imagenes .grilla-imagenes .img-3 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3; }
+    main .galeria-imagenes .grilla-imagenes .img-4 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 5; }
+    main .galeria-imagenes .grilla-imagenes .img-5 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 5; }
   main .contacto .formulario-de-contacto {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -953,38 +990,6 @@ main .marcas {
         text-align: center; } }
 
 @media screen and (max-width: 700px) {
-  main .galeria-imagenes .grilla-imagenes {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 150px 150px 150px;
-    padding: 0px;
-    padding-top: 20px;
-    gap: 10px; }
-    main .galeria-imagenes .grilla-imagenes .img-1 {
-      grid-column-start: 2;
-      grid-column-end: 3;
-      grid-row-start: 1;
-      grid-row-end: 3; }
-    main .galeria-imagenes .grilla-imagenes .img-2 {
-      grid-column-start: 1;
-      grid-column-end: 2;
-      grid-row-start: 1;
-      grid-row-end: 2; }
-    main .galeria-imagenes .grilla-imagenes .img-3 {
-      grid-column-start: 1;
-      grid-column-end: 2;
-      grid-row-start: 2;
-      grid-row-end: 3; }
-    main .galeria-imagenes .grilla-imagenes .img-4 {
-      grid-column-start: 1;
-      grid-column-end: 2;
-      grid-row-start: 3;
-      grid-row-end: 4; }
-    main .galeria-imagenes .grilla-imagenes .img-5 {
-      grid-column-start: 2;
-      grid-column-end: 3;
-      grid-row-start: 3;
-      grid-row-end: 4; }
   main .terraza {
     flex-direction: column;
     gap: 5px;

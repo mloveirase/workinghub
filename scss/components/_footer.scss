@@ -12,6 +12,8 @@ footer {
     align-items: center;
     .secciones-web {
         border-right: solid 1px $color-fondo;
+        align-content: center;
+        height: 100%;
         a {
             img {
                 height: 40px;
