@@ -559,39 +559,39 @@ main {
                 }
             }
         }
-        .modal{
-            .modal-dialog{
-                .modal-content{
-                    .modal-body{
-                        @include tipografia-secundaria (400, 0px, center);
-                        font-size: 16px;
-                        color: $color-textos;
-                        i{
-                            font-size: 80px !important;
-                            color: $color-principal;
-                        }
-                        h2{
-                            @include tipografia-secundaria (700, 0px, center);
-                            font-size: 28px;
-                            color: $color-principal;
-                        }
+    }
+    .modal{
+        .modal-dialog{
+            .modal-content{
+                .modal-body{
+                    @include tipografia-secundaria (400, 0px, center);
+                    font-size: 16px;
+                    color: $color-textos;
+                    i{
+                        font-size: 80px !important;
+                        color: $color-principal;
                     }
-                    .modal-footer{
-                        align-content: center;
-                        border-top: none !important;
-                        justify-content: center !important;
-                        .btn-secondary{
-                            background-color: $color-fondo !important;
+                    h2{
+                        @include tipografia-secundaria (700, 0px, center);
+                        font-size: 28px;
+                        color: $color-principal;
+                    }
+                }
+                .modal-footer{
+                    align-content: center;
+                    border-top: none !important;
+                    justify-content: center !important;
+                    .btn-secondary{
+                        background-color: $color-fondo !important;
+                        border-color: $color-secundario !important;
+                        color: $color-secundario !important;
+                        text-transform: uppercase !important;
+                        @include tipografia-secundaria (500 !important, 0.75px !important, center);
+                        transition: 1s;
+                        &:hover{
+                            background-color: $color-secundario !important;
                             border-color: $color-secundario !important;
-                            color: $color-secundario !important;
-                            text-transform: uppercase !important;
-                            @include tipografia-secundaria (500 !important, 0.75px !important, center);
-                            transition: 1s;
-                            &:hover{
-                                background-color: $color-secundario !important;
-                                border-color: $color-secundario !important;
-                                color: $color-fondo !important;
-                            }
+                            color: $color-fondo !important;
                         }
                     }
                 }

@@ -768,47 +768,49 @@ main .marcas {
           background-color: #862D5D;
           color: #FEFEFE;
           border: 2px solid #862D5D; }
-  .contacto .modal .modal-dialog .modal-content .modal-body {
+
+.modal .modal-dialog .modal-content .modal-body {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-align: center;
+  font-size: 16px;
+  color: #212121; }
+  .modal .modal-dialog .modal-content .modal-body i {
+    font-size: 80px !important;
+    color: #49BCAE; }
+  .modal .modal-dialog .modal-content .modal-body h2 {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 0px;
     text-align: center;
-    font-size: 16px;
-    color: #212121; }
-    .contacto .modal .modal-dialog .modal-content .modal-body i {
-      font-size: 80px !important;
-      color: #49BCAE; }
-    .contacto .modal .modal-dialog .modal-content .modal-body h2 {
-      font-family: "Montserrat", sans-serif;
-      font-style: normal;
-      font-optical-sizing: auto;
-      font-weight: 700;
-      letter-spacing: 0px;
-      text-align: center;
-      font-size: 28px;
-      color: #49BCAE; }
-  .contacto .modal .modal-dialog .modal-content .modal-footer {
-    align-content: center;
-    border-top: none !important;
-    justify-content: center !important; }
-    .contacto .modal .modal-dialog .modal-content .modal-footer .btn-secondary {
-      background-color: #FEFEFE !important;
+    font-size: 28px;
+    color: #49BCAE; }
+
+.modal .modal-dialog .modal-content .modal-footer {
+  align-content: center;
+  border-top: none !important;
+  justify-content: center !important; }
+  .modal .modal-dialog .modal-content .modal-footer .btn-secondary {
+    background-color: #FEFEFE !important;
+    border-color: #862D5D !important;
+    color: #862D5D !important;
+    text-transform: uppercase !important;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 500 !important;
+    letter-spacing: 0.75px !important;
+    text-align: center;
+    transition: 1s; }
+    .modal .modal-dialog .modal-content .modal-footer .btn-secondary:hover {
+      background-color: #862D5D !important;
       border-color: #862D5D !important;
-      color: #862D5D !important;
-      text-transform: uppercase !important;
-      font-family: "Montserrat", sans-serif;
-      font-style: normal;
-      font-optical-sizing: auto;
-      font-weight: 500 !important;
-      letter-spacing: 0.75px !important;
-      text-align: center;
-      transition: 1s; }
-      .contacto .modal .modal-dialog .modal-content .modal-footer .btn-secondary:hover {
-        background-color: #862D5D !important;
-        border-color: #862D5D !important;
-        color: #FEFEFE !important; }
+      color: #FEFEFE !important; }
 
 @media screen and (max-width: 1290px) {
   header .navbar-responsive {
